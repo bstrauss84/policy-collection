@@ -10,7 +10,7 @@ policyDefaults:
     name: demo-placement-rule
     clusterSelectors:
       name: local-cluster
-  remediationAction: inform
+  remediationAction: enforce
   severity: medium
 policies:
   - name: policy-app

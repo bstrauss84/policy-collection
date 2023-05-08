@@ -18,7 +18,7 @@ policies:
       - path: policy1_deployment
         patches:
           - apiVersion: apps/v1
-            kind: Deployment
+            kind: DeploymentConfig
             metadata:
               name: gitops-demo
               namespace: gitops-demo

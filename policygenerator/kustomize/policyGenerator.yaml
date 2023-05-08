@@ -17,7 +17,7 @@ policies:
     manifests:
       - path: policy1_deployment
         patches:
-          - apiVersion: apps/v1
+          - apiVersion: apps.openshift.io/v1
             kind: DeploymentConfig
             metadata:
               name: gitops-demo

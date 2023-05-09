@@ -5,7 +5,7 @@ metadata:
   namespace: gitops-demo
   labels:
     app: gitops-demo
-    testapp: true
+    testapp: gitops-demo
 spec:
   replicas: 1
   selector:
@@ -14,7 +14,7 @@ spec:
     metadata:
       labels:
         app: gitops-demo
-        test: true
+        testapp: gitops-demo
     spec:
       containers:
         - name: gitops-demo

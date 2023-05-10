@@ -8,8 +8,8 @@ data:
 #  us-east-2-4.10: ami-09e637fc5885c13cc
   replicas: "2"
   instanceType: m6a.2xlarge
-  zone1: a
-  zone2: b
+#  zone1: a
+#  zone2: b
   zone3: c
 kind: ConfigMap
 metadata:

@@ -6,7 +6,7 @@ metadata:
 profiles:
 - apiGroup: compliance.openshift.io/v1alpha1
   kind: Profile
-  name: rhcos-moderate
+  name: rhcos4-moderate
 settingsRef:
   apiGroup: compliance.openshift.io/v1alpha1
   kind: ScanSetting

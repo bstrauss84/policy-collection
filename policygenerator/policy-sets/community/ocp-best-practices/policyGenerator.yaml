@@ -44,10 +44,10 @@ policies:
 #    - SC-12 Cryptographic Key Establishment and Management
 #  manifests:
 #    - path: input-certs/
-- name: policy-compliance-operator-install
-  manifests:
-    - path: input-compliance/policy-compliance-operator-install.yaml
-  remediationAction: "enforce"
+#- name: policy-compliance-operator-install
+#  manifests:
+#    - path: input-compliance/policy-compliance-operator-install.yaml
+#  remediationAction: "enforce"
 - name: policy-compliance-operator-moderate-scan
   manifests:
     - path: input-compliance/policy-compliance-operator-moderate-scan.yaml

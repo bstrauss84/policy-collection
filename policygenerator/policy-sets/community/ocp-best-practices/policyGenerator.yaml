@@ -52,10 +52,19 @@ policies:
   manifests:
     - path: input-compliance/policy-compliance-operator-moderate-scan.yaml
   remediationAction: "enforce"
+- name: policy-compliance-operator-rhcos-moderate-scan
+  manifests:
+    - path: input-compliance/policy-compliance-operator-rhcos-moderate-scan.yaml
+  remediationAction: "enforce"
 - name: policy-compliance-operator-moderate-scan-results
   complianceType: "mustnothave"
   manifests:
     - path: input-compliance/policy-compliance-operator-scan-results.yaml
+  remediationAction: "inform"
+- name: policy-compliance-operator-rhcos-moderate-scan-results
+  complianceType: "mustnothave"
+  manifests:
+    - path: input-compliance/policy-compliance-operator-rhcos-scan-results.yaml
   remediationAction: "inform"
 #- name: policy-etcd-backup
 #  manifests:

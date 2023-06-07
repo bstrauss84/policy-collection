@@ -95,18 +95,18 @@ spec:
   kind: storagecluster.ocs.openshift.io/v1
   name: ocs-storagecluster
   namespace: openshift-storage
-#---
-#apiVersion: operator.openshift.io/v1
-#kind: Console
-#metadata:
-#  name: cluster
-#spec:
+---
+apiVersion: operator.openshift.io/v1
+kind: Console
+metadata:
+  name: cluster
+spec:
 #  customization:
 #    customLogoFile:
 #      key: custom-logo.jpg
 #      name: custom-logo
 #    customProductName: Console
-#  managementState: Managed
+  managementState: Managed
 ---
 apiVersion: operator.openshift.io/v1alpha1
 kind: ImageContentSourcePolicy

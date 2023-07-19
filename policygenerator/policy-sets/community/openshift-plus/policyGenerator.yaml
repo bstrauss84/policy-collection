@@ -89,6 +89,8 @@ policies:
   manifests:
     - path: input-odf/policy-odf.yaml
 - name: policy-odf-object-storage
+  dependencies:
+    - name: policy-odf
   categories:
     - SI System and Information Integrity
   controls: 

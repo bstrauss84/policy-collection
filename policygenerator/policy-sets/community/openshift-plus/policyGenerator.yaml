@@ -88,6 +88,13 @@ policies:
     - SI-7 Software Firmware and Information Integrity
   manifests:
     - path: input-odf/policy-odf.yaml
+- name: policy-odf-object-storage
+  categories:
+    - SI System and Information Integrity
+  controls: 
+    - SI-7 Software Firmware and Information Integrity
+  manifests:
+    - path: input-odf/policy-object-storage.yaml
 - name: policy-odf-status
   categories:
     - SI System and Information Integrity

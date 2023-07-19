@@ -79,15 +79,15 @@ spec:
     preparePlacement: {}
     replica: 3
     resources: {}
----
-apiVersion: objectbucket.io/v1alpha1
-kind: ObjectBucketClaim
-metadata:
-  name: obc-observability
-  namespace: openshift-storage
-spec:
-  generateBucketName: obc-observability-bucket
-  storageClassName: openshift-storage.noobaa.io
+#---
+#apiVersion: objectbucket.io/v1alpha1
+#kind: ObjectBucketClaim
+#metadata:
+#  name: obc-observability
+#  namespace: openshift-storage
+#spec:
+#  generateBucketName: obc-observability-bucket
+#  storageClassName: openshift-storage.noobaa.io
 ---
 apiVersion: operator.openshift.io/v1
 kind: Console

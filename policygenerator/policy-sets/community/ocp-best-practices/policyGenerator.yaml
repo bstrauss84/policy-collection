@@ -38,13 +38,13 @@ policies:
     - path: input-audit/policy-config-audit.yaml
   remediationAction: "enforce"
 # The cert ocp4 policy was commented out for some reason
-- name: policy-cert-ocp4
-  categories:
-    - SC System and Communications Protection
-  controls:
-    - SC-12 Cryptographic Key Establishment and Management
-  manifests:
-    - path: input-certs/
+#- name: policy-cert-ocp4
+#  categories:
+#    - SC System and Communications Protection
+#  controls:
+#    - SC-12 Cryptographic Key Establishment and Management
+#  manifests:
+#    - path: input-certs/
 #- name: policy-compliance-operator-install
 #  manifests:
 #    - path: input-compliance/policy-compliance-operator-install.yaml

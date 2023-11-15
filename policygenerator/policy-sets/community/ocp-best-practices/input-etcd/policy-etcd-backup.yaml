@@ -156,11 +156,13 @@ data:
 kind: ConfigMap
 metadata:
   name: etcd-backup-script
+  namespace: etcdbackup
 ---
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: cronjob-etcd-backup
+  namespace: etcdbackup
   labels:
     purpose: etcd-backup
 spec:

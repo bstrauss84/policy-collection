@@ -37,13 +37,14 @@ policies:
   manifests:
     - path: input-audit/policy-config-audit.yaml
   remediationAction: "enforce"
-#- name: policy-cert-ocp4
-#  categories:
-#    - SC System and Communications Protection
-#  controls:
-#    - SC-12 Cryptographic Key Establishment and Management
-#  manifests:
-#    - path: input-certs/
+# The cert ocp4 policy was commented out for some reason
+- name: policy-cert-ocp4
+  categories:
+    - SC System and Communications Protection
+  controls:
+    - SC-12 Cryptographic Key Establishment and Management
+  manifests:
+    - path: input-certs/
 #- name: policy-compliance-operator-install
 #  manifests:
 #    - path: input-compliance/policy-compliance-operator-install.yaml
@@ -70,10 +71,11 @@ policies:
   manifests:
     - path: input-compliance/policy-compliance-operator-rhcos-scan-results.yaml
   remediationAction: "inform"
-#- name: policy-etcd-backup
-#  manifests:
-#    - path: input-etcd/policy-etcd-backup.yaml
-#  remediationAction: "enforce"
+# The etcd backup policy was originally commented out for some reason
+- name: policy-etcd-backup
+  manifests:
+    - path: input-etcd/policy-etcd-backup.yaml
+  remediationAction: "enforce"
 - name: policy-etcdencryption
   categories:
     - SC System and Communications Protection

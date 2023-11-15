@@ -6,6 +6,7 @@ data:
   us-east-2-4.11: ami-026e5701f495c94a2
   us-east-1-4.10: ami-0c72f473496a7b1c2
   us-east-2-4.10: ami-09e637fc5885c13cc
+  us-east-2-4.13: ami-0dc6c4d1bd5161f13
   replicas: "2"
   instanceType: m6a.2xlarge
   zone1: a

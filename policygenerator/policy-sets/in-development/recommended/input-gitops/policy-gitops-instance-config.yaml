@@ -111,7 +111,8 @@ spec:
           matchExpressions:
             - key: vendor
               operator: In
-              values: OpenShift
+              values: 
+                - OpenShift
 ---
 apiVersion: apps.open-cluster-management.io/v1beta1
 kind: GitOpsCluster

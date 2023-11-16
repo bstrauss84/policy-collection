@@ -3,7 +3,7 @@ kind: PolicyGenerator
 metadata:
   name: policy-openshift-recommended
 placementBindingDefaults:
-  name: binding-policy-openshift-plus-hub
+  name: binding-policy-openshift-recommended
 policyDefaults:
   categories:
     - CM Configuration Management
@@ -11,7 +11,7 @@ policyDefaults:
     - CM-2 Baseline Configuration
   namespace: policies
   policySets:
-    - openshift-plus-hub
+    - openshift-recommended-hub
   remediationAction: enforce
   severity: medium
   standards:
@@ -48,13 +48,13 @@ policySets:
       that will install the OpenShift Platform Plus products using best practices
       that allow them to work well together. This policy set is focused on 
       the components that install to the Advanced Cluster Management hub.
-    name: openshift-plus-hub
+    name: openshift-recommended-hub
     placement:
       placementPath: input/hub-placement.yaml
   - description: The OpenShift Platform Plus policy set applies several policies
       that install the OpenShift Platform Plus products using best practices
       that allow them to work well together. This policy set is focused on 
       the components that install to every managed cluster.
-    name: openshift-plus-clusters
+    name: openshift-recommended-clusters
     placement:
       placementPath: input/clusters-placement.yaml

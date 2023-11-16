@@ -37,6 +37,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: etcd-backup
+    namespace: etcdbackup
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

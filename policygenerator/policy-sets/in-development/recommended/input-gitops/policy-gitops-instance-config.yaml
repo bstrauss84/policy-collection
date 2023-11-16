@@ -88,14 +88,14 @@ roleRef:
   kind: ClusterRole
   name: openshift-gitops-policy-admin
 # The following 3 objects configure the GitOps cluster instance
-#---
-#apiVersion: cluster.open-cluster-management.io/v1beta1
-#kind: ManagedClusterSetBinding
-#metadata:
-#  name: gitops-binding
-#  namespace: openshift-gitops
-#spec:
-#  clusterSet: default
+---
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: ManagedClusterSetBinding
+metadata:
+  name: gitops-binding
+  namespace: openshift-gitops
+spec:
+  clusterSet: default
 ---
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement

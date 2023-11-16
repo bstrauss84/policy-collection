@@ -17,7 +17,7 @@ policyDefaults:
   standards:
     - NIST SP 800-53
 policies:
-# Additional Operators Policies - start
+# GitOps Operator Policies - start
 - name: policy-gitops
   categories:
     - SI System and Information Integrity
@@ -25,6 +25,16 @@ policies:
     - SI-7 Software Firmware and Information Integrity
   manifests:
     - path: input-gitops/policy-gitops-operator-install.yaml
+- name: policy-gitops-config
+  dependencies:
+    - name: policy-gitops
+  categories:
+    - SI System and Information Integrity
+  controls:
+    - SI-7 Software Firmware and Information Integrity
+  manifests:
+    - path: input-gitops/policy-gitops-instance-config.yaml
+# GitOps Operator Policies - end
 #- name: policy-odf-object-storage
 #  dependencies:
 #    - name: policy-odf

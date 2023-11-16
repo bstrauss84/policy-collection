@@ -6,7 +6,7 @@ metadata:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: approver
+  name: etcdbackup-approver
   namespace: etcdbackup
   labels:
     app: etcd
@@ -36,7 +36,7 @@ roleRef:
   name: use-privileged-scc
 subjects:
   - kind: ServiceAccount
-    name: etcd-backup
+    name: etcdbackup-approver
     namespace: etcdbackup
 ---
 apiVersion: v1
@@ -171,7 +171,7 @@ spec:
       backoffLimit: 0
       template:
         spec:
-          activeDeadlineSeconds: 200
+          activeDeadlineSeconds: 500
           containers:
             - name: etcd-backup
               command:
@@ -216,11 +216,15 @@ spec:
                 - name: scripts
                   mountPath: /usr/local/bin
           hostNetwork: true
+          hostPID: true
+          enableServiceLinks: true
+          schedulerName: default-scheduler
           nodeSelector:
             node-role.kubernetes.io/master: ''
+          terminationGracePeriodSeconds: 30
+          securityContext: {}
           restartPolicy: Never
-          serviceAccount: approver
-          serviceAccountName: approver
+          serviceAccountName: etcdbackup-approver
           tolerations:
             - effect: NoSchedule
               operator: Exists

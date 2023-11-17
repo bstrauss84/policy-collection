@@ -11,7 +11,7 @@ metadata:
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
-  generateName: openshift-gitops-operator-
+  name: openshift-gitops-operator
   namespace: openshift-gitops-operator
 #---
 #apiVersion: console.openshift.io/v1

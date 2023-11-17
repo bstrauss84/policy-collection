@@ -87,7 +87,42 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: openshift-gitops-policy-admin
-# The following 3 objects configure the GitOps cluster instance
+# The following 2 objects configure the GitOps cluster instance
+---
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: Placement
+metadata:
+  name: gitops-placement
+  namespace: policies
+spec:
+  clusterSets:
+    - default
+  predicates:
+    - requiredClusterSelector:
+        labelSelector:
+          matchExpressions:
+            - key: environment
+              operator: In
+              values:
+                - test
+                - prod
+                - mgmt
+                - dev
+---
+apiVersion: apps.open-cluster-management.io/v1beta1
+kind: GitOpsCluster
+metadata:
+  name: gitops-cluster
+  namespace: policies
+spec:
+  argoServer:
+    argoNamespace: openshift-gitops
+    cluster: local-cluster
+  placementRef:
+    apiVersion: cluster.open-cluster-management.io/v1beta1
+    kind: Placement
+    name: gitops-placement
+    namespace: policies
 #---
 #apiVersion: cluster.open-cluster-management.io/v1beta2
 #kind: ManagedClusterSet

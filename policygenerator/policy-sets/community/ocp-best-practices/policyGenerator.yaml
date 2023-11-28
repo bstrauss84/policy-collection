@@ -71,6 +71,17 @@ policies:
   manifests:
     - path: input-compliance/policy-compliance-operator-rhcos-scan-results.yaml
   remediationAction: "inform"
+- name: policy-compliance-operator-disa-stig-scan
+  manifests:
+    - path: input-compliance/policy-compliance-operator-disa-stig-scan.yaml
+  remediationAction: "enforce"
+- name: policy-compliance-operator-disa-stig-results
+  complianceType: "mustnothave"
+  dependencies:
+    - name: policy-compliance-operator-disa-stig-scan
+  manifests:
+    - path: input-compliance/policy-compliance-operator-disa-stig-scan-results.yaml
+  remediationAction: "inform"
 # The etcd backup policy was originally commented out for some reason
 #- name: policy-etcd-backup
 #  manifests:

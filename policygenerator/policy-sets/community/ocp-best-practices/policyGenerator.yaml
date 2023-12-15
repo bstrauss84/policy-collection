@@ -87,14 +87,14 @@ policies:
 #  manifests:
 #    - path: input-etcd/policy-etcd-backup.yaml
 #  remediationAction: "enforce"
-- name: policy-etcdencryption
-  categories:
-    - SC System and Communications Protection
-  controls:
-    - SC-28 Protection Of Information At Rest
-  manifests:
-    - path: input-etcd/policy-etcdencryption.yaml
-  remediationAction: "enforce"
+#- name: policy-etcdencryption
+#  categories:
+#    - SC System and Communications Protection
+#  controls:
+#    - SC-28 Protection Of Information At Rest
+#  manifests:
+#    - path: input-etcd/policy-etcdencryption.yaml
+#  remediationAction: "enforce"
 - name: policy-file-integrity-operator
   categories:
     - SC System and Communications Protection

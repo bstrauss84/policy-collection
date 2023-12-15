@@ -40,6 +40,8 @@ policies:
     - SI-5 Security Alerts Advisories and Directives
   manifests:
     - path: input-sensor/policy-acs-central-ca-bundle.yaml
+  dependencies:
+    - name: policy-odf-status
 - name: policy-acs-sync-resources
   categories:
     - SI System and Information Integrity
@@ -48,6 +50,8 @@ policies:
     - SI-5 Security Alerts Advisories and Directives
   manifests:
     - path: input-sensor/policy-acs-sync-resources.yaml
+  dependencies:
+    - name: policy-odf-status
 - name: policy-advanced-managed-cluster-security
   categories:
     - SI System and Information Integrity
@@ -58,6 +62,8 @@ policies:
     - path: input-sensor/policy-advanced-managed-cluster-security.yaml
   policySets:
     - openshift-plus-clusters
+  dependencies:
+    - name: policy-odf-status
 - name: policy-advanced-managed-cluster-status
   categories:
     - SI System and Information Integrity
@@ -79,6 +85,8 @@ policies:
     - CA-7 Continuous Monitoring
   manifests:
     - path: input-acm-observability/
+  dependencies:
+    - name: policy-odf-status
 # Observability Policy - end
 # ODF Policies - start
 - name: policy-odf

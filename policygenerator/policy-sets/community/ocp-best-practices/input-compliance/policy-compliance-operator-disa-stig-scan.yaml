@@ -10,9 +10,6 @@ profiles:
 - apiGroup: compliance.openshift.io/v1alpha1
   kind: Profile
   name: disa-stig-node
-- apiGroup: compliance.openshift.io/v1alpha1
-  kind: Profile
-  name: rhcos4-stig
 settingsRef:
   apiGroup: compliance.openshift.io/v1alpha1
   kind: ScanSetting

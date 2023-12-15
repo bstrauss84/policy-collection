@@ -4,4 +4,4 @@ metadata:
   namespace: openshift-compliance
   labels:
     compliance.openshift.io/check-status: FAIL
-    compliance.openshift.io/suite: disa-stig
+    compliance.openshift.io/suite: ocp4-stig

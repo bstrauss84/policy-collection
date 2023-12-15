@@ -107,28 +107,28 @@ policies:
   remediationAction: inform
 # ODF Policies - end
 # Quay Policies - start
-- name: policy-install-quay
-  categories:
-    - SI System and Information Integrity
-  controls:
-    - SI-7 Software Firmware and Information Integrity
-  manifests:
-    - path: input-quay/policy-install-quay.yaml
-- name: policy-config-quay
-  categories:
-    - SI System and Information Integrity
-  controls: 
-    - SI-7 Software Firmware and Information Integrity
-  manifests:
-    - path: input-quay/policy-config-quay.yaml
-- name: policy-quay-status
-  categories:
-    - SI System and Information Integrity
-  controls:
-    - SI-7 Software Firmware and Information Integrity
-  manifests:
-    - path: input-quay/policy-quay-status.yaml
-  remediationAction: inform
+#- name: policy-install-quay
+#  categories:
+#    - SI System and Information Integrity
+#  controls:
+#    - SI-7 Software Firmware and Information Integrity
+#  manifests:
+#    - path: input-quay/policy-install-quay.yaml
+#- name: policy-config-quay
+#  categories:
+#    - SI System and Information Integrity
+#  controls: 
+#    - SI-7 Software Firmware and Information Integrity
+#  manifests:
+#    - path: input-quay/policy-config-quay.yaml
+#- name: policy-quay-status
+#  categories:
+#    - SI System and Information Integrity
+#  controls:
+#    - SI-7 Software Firmware and Information Integrity
+#  manifests:
+#    - path: input-quay/policy-quay-status.yaml
+#  remediationAction: inform
 # Quay Bridge requires a token that needs to be populated in a secret. Uncomment the following 
 # 2 policies if you need to use the quay bridge.  After quay is running, see the instructions:
 # https://hybrid-cloud-patterns.io/devsecops/getting-started/#completing-the-quay-bridge-with-a-bearer-token
